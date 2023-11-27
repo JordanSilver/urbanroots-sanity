@@ -64,7 +64,23 @@ const Navigation = ({ mobile }) => {
           URB
           <span className='bi bi-tree-fill' />N <span> ROOTS</span>
         </motion.div>
-
+        {mobile && (
+          <motion.div
+            className={styles.buttonToTop}
+            whileTap={{ scale: 1.3 }}
+            style={{ cursor: 'pointer' }}
+          >
+            {!isWindowTop ? (
+              <div onClick={scrollToTop}>
+                <h3 className='bi bi-arrow-up-square m-0' />
+              </div>
+            ) : (
+              <div onClick={scrollToServ}>
+                <h3 className='bi bi-arrow-down-square m-0' />
+              </div>
+            )}
+          </motion.div>
+        )}
         <span className='col-auto d-flex justify-content-end gap-3'>
           {mobile ? (
             <motion.div
@@ -127,21 +143,6 @@ const Navigation = ({ mobile }) => {
           </motion.div>
         </Offcanvas>
       </motion.nav>
-      <motion.div
-        className={styles.buttonToTop}
-        whileTap={{ scale: 1.3 }}
-        style={{ cursor: 'pointer' }}
-      >
-        {!isWindowTop ? (
-          <div onClick={scrollToTop}>
-            <h3 className='bi bi-arrow-up-square m-0' />
-          </div>
-        ) : (
-          <div onClick={scrollToServ}>
-            <h3 className='bi bi-arrow-down-square m-0' />
-          </div>
-        )}
-      </motion.div>
     </>
   );
 };
