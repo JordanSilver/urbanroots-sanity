@@ -39,7 +39,7 @@ const GalleryFeature = ({ galleryFeat, mobile, styles }) => {
 
       <div className='text-center text-white mt-4'>
         <h3>
-          <small>SEE MORE BELOW</small>
+          <small>see more below</small>
         </h3>
       </div>
     </div>
