@@ -14,7 +14,6 @@ const Meta = ({ title, description, keywords }) => {
 Meta.defaultProps = {
   title: ' URBAN ROOTS LANDSCAPING',
   description: 'LANDSCAPE CONTRACTORS',
-  keywords:
-    'Kitchen Cabinet Painting Custom Cabinet Painters Barrie Ontario Canada',
+  keywords: 'Urban Roots Landscape Contractors',
 };
 export default Meta;
