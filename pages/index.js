@@ -25,7 +25,7 @@ export default function Home({
     <>
       <RouteAnimation>
         <main className={styles.main}>
-          <HeroShowcase showcase={showcase} />
+          <HeroShowcase showcase={showcase} mobile={mobile} />
           <GalleryFeature
             mobile={mobile}
             galleryFeat={galleryFeat}

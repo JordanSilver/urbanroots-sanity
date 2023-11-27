@@ -5,19 +5,35 @@ import styles from '../styles/Home.module.scss';
 import ShowcaseCarousel from './ShowcaseCarousel';
 import { motion } from 'framer-motion';
 import TitleAnimation from './TitleAnimation';
+import Image from 'next/image';
 
-const HeroShowcase = ({ showcase }) => {
+const HeroShowcase = ({ showcase, mobile }) => {
   const [pictureInx, setPictureInx] = useState(0);
   return (
-    <motion.div className={styles.HeroShowcase}>
-      {/* <ShowcaseCarousel showcase={showcase} setPictureInx={setPictureInx} /> */}
+    <div className={styles.HeroShowcase}>
+      <motion.div className={styles.trusted__partners}>
+        {/* <ShowcaseCarousel showcase={showcase} setPictureInx={setPictureInx} /> */}
 
-      <div className={styles.HeroTitle}>
-        BACKYARD <br /> RENOVATIONS <br />
-        <small>by</small> <br />
-        <p className={styles.heroBrand}>URBAN ROOTS</p>
-      </div>
-    </motion.div>
+        <div className={styles.HeroTitle}>
+          <small>
+            <br />
+            Landscape <br /> contracting <br /> by
+          </small>{' '}
+          <br />
+          <p className={styles.heroBrand}>
+            {' '}
+            <Image
+              className={styles.OffCanvaHead}
+              src='/urbanroots-logo.jpg'
+              width={mobile ? 170 : 250}
+              height={mobile ? 180 : 180}
+              quality={100}
+              priority={true}
+            />
+          </p>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
