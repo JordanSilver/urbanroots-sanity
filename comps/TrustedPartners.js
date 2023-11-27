@@ -13,7 +13,7 @@ const TrustedPartners = () => {
           <span
             style={{
               fontFamily: 'Roboto, sans-serif',
-              fontSize: '3rem',
+              fontSize: '2rem',
               fontWeight: '700',
               textShadow: '1px 0px 2px #fff',
               lineHeight: '1',
@@ -30,7 +30,7 @@ const TrustedPartners = () => {
           <span
             style={{
               fontFamily: 'Roboto, sans-serif',
-              fontSize: '3rem',
+              fontSize: '2rem',
               fontWeight: '700',
               textShadow: '1px 0px 2px #fff',
               lineHeight: '1',
@@ -47,7 +47,7 @@ const TrustedPartners = () => {
           <span
             style={{
               fontFamily: 'Roboto, sans-serif',
-              fontSize: '3rem',
+              fontSize: '2rem',
               fontWeight: '700',
               textShadow: '1px 0px 2px #fff',
               lineHeight: '1',
@@ -64,7 +64,7 @@ const TrustedPartners = () => {
           <span
             style={{
               fontFamily: 'Roboto, sans-serif',
-              fontSize: '3rem',
+              fontSize: '2rem',
               fontWeight: '700',
               textShadow: '1px 0px 2px #fff',
               lineHeight: '1',
