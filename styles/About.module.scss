@@ -1,0 +1,258 @@
+.about__showcaseHero {
+  position: relative !important;
+  width: 100%;
+  height: 50vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  -webkit-transform: translatez(0);
+}
+.about__showcaseHeroLeft {
+  position: absolute;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  letter-spacing: 0.5rem;
+  font-family: 'Gentium Plus', serif;
+}
+
+.about__callToAction,
+.about__callToActionTwo {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  overflow: hidden;
+  border-top: #000 solid 3px;
+  border-bottom: #000 solid 3px;
+}
+
+.about__callToActionTwo {
+  background-image: url('/modern-1.jpg');
+  background-size: cover;
+  background-position: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.about__callToAction {
+  background-image: url('/tag-v3-lite.jpg');
+  background-size: cover;
+
+  background-position: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+// .about__callToActionImgWrap {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   object-fit: cover;
+//   object-position: fixed;
+// }
+
+.about__welcomeToTag {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/paralaxdrawer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+// .about__welcomeToTagImg {
+//   position: absolute !important;
+//   top: 0 !important;
+//   left: 0 !important;
+//   object-fit: fill;
+//   width: 100%;
+//   height: 100%;
+//   object-position: fixed;
+// }
+
+.about__contactBanner {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.about__contactBannerTwo {
+  width: 100%;
+  font-size: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.about___contactBannerCard {
+  font-size: 1rem;
+  border: 1px solid #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  color: #000;
+  font-weight: 700;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+}
+.about___contactBannerCardTwo {
+  font-size: 1rem;
+  border: 1px solid #fff;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  color: #000;
+  font-weight: 700;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+}
+
+.about__showcaseImage {
+  width: 100%;
+  height: 50vh;
+  margin: 0 auto;
+  object-fit: cover !important;
+  object-position: center !important;
+  z-index: 1;
+}
+
+.about__whyTagComp {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Gentium Plus', serif;
+  border-top: #000 solid 3px;
+  background-image: url('/paralaxdrawer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.about__whyTagGrid {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+.about__whyTag {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+  overflow: hidden;
+  font-size: 2rem;
+  margin: 0 auto;
+  z-index: 100;
+  font-family: 'Gentium Plus', serif;
+  max-height: 600px;
+}
+@media screen and (min-width: 768px) {
+  .about__WhyTagCarousel {
+    transform: translateY(-20%);
+  }
+}
+
+.about__whyTagTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: start;
+  color: #fff;
+  text-shadow: #000 1px 2px 1px;
+  @media screen and (max-width: 768px) {
+    width: 40%;
+    font-size: 2rem;
+  }
+}
+
+.about__whyTagCaption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: end;
+  color: #fff;
+  text-shadow: #000 1px 2px 1px;
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.about__whyTagBtn {
+  position: absolute !important;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  z-index: 100;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: end;
+  color: #fff;
+  text-shadow: #000 0px 0px 5px;
+  white-space: nowrap;
+  @media screen and (max-width: 768px) {
+    top: 0%;
+    right: 0%;
+    transform: translate(0%, 0%);
+  }
+}
+
+.about__showcaseScrollDown {
+  position: absolute;
+  bottom: 10%;
+}

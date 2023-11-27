@@ -1,53 +1,494 @@
 .container {
   padding: 0 2rem;
 }
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: min-content;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 2rem;
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  background: lightgreen;
+
+  color: #000;
+
+  // animate navigation to top of screen on scroll
+  // animation: slide-in-navigation 0.5s ease-in-out;
+  @keyframes slide-in-navigation {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 3;
+}
+
+.OffCanvaHead {
+  border-radius: 1rem;
+}
+
+.UrbanRootsLogo {
+  white-space: nowrap !important;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+  display: inline-block;
+  transform: scale(0.6, 1);
+  font-size: 2rem;
+
+  span {
+    color: green;
+  }
+}
+.OffcanvasNav {
+  width: 50%;
+  background: rgba(104, 244, 127, 0.75);
+  height: 50%;
+  box-shadow: inset;
+  box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0px 30px 60px -30px rgba(0, 0, 0, 0.3),
+    inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
+  color: #000;
+}
+.OffcanvasNavBody {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: green 0.1rem 0.1rem 0.1rem;
+  z-index: 10;
+}
+.OffcanvasNavImage {
+  object-fit: cover;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.lightboxButton {
+  position: absolute;
+  right: 5% !important;
+  bottom: -2.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  @media screen and (min-width: 1000px) {
+    right: 0;
+    bottom: 1rem;
+    font-size: 1.8rem;
+  }
+}
+.HeroShowcase {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  margin: 0 auto;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.HeroTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem !important;
+  color: #fff;
+  text-shadow: 1px 2px 1px #000;
+  font-family: 'FreeHand', cursive;
+  font-size: 3rem;
+  white-space: nowrap;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem !important;
+  }
+}
+.heroBrand {
+  font-size: 2.6rem !important;
+  font-family: 'Gentium Plus', serif;
+  font-weight: bold;
+  text-shadow: 3px 2px 1px #000;
+  @media screen and (max-width: 768px) {
+    font-size: 2rem !important;
+  }
+}
+
+.callToAction,
+.request__consultation {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  overflow-x: hidden;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .callToAction {
+    height: 100%;
+  }
+  .request__consultation {
+    flex-direction: column !important;
+  }
+}
+.request__consultation {
+  gap: 0rem !important;
+  height: 300px !important;
+  @media screen and (max-width: 768px) {
+    height: 250px !important;
+  }
+}
+
+.trusted__partners {
+  position: relative;
+  height: 100% !important;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-top: #000 3px solid;
+
+  div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    :nth-child(2) {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.request__consultation,
+.trusted__partners {
+  background-image: url('/ur-flower.jpg');
+  background-size: cover;
+  background-position: 20%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 15rem;
+  margin-top: 0;
+}
+
+.trusted__partnersTitle {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 3.5rem !important;
+  color: #fff;
+  text-shadow: 1px 2px 1px #000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 3rem;
+  white-space: nowrap;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem !important;
+  }
+}
+.buttonToTop {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  color: #fff !important;
+
+  border-radius: 0.3rem;
+}
+.callToActionImage {
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: fixed !important;
+
+  background-attachment: fixed !important;
+}
+
+.cardContentLeft {
+  position: relative;
+  flex: 0.5;
+  height: 100%;
+  max-width: 468px;
+  font-size: 2.8rem;
+  letter-spacing: 0.5rem;
+
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  text-align: end;
+  font-family: 'Gentium Plus', serif;
+  text-shadow: #000 0.1rem 0.1rem 0.1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.2rem !important;
+    flex: 0.4 !important;
+    letter-spacing: 0rem !important;
+  }
+  span {
+    text-shadow: #000 0.1rem 0.1rem 0.1rem;
+  }
+}
+
+.ActionBtn {
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  height: min-content;
+  width: max-content;
+  max-width: 200px;
+  font-size: 1.2rem;
+  display: flex;
+  font-weight: 300;
+  border: 1px solid #eaeaea;
+  padding: 0.3rem;
+
+  border-radius: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #eaeaea;
+    color: #000 !important;
+  }
+  @media screen and (max-width: 768px) {
+    bottom: 5% !important;
+    left: 35% !important;
+  }
+}
+
+.cardContentRight {
+  flex: 0.5;
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  font-weight: 600;
+  max-width: 300px;
+  z-index: 1;
+  margin: 2rem 0;
+  @media screen and (max-width: 375px) {
+    font-size: 0.8rem;
+  }
+  @media screen and (max-width: 768px) {
+    flex: 0.5 !important;
+  }
+}
+
+.showcaseReviews {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.reviewTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+// nav grid
+
+.home__navGridImage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.card__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: none;
+  transition: all 0.5s ease;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  font-size: 1.5rem;
+
+  text-align: end;
+  z-index: 50;
+  &:hover {
+    opacity: 0.9;
+    visibility: visible;
+  }
+  .card__overlay_btn {
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: 1px solid #000;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: rgba(0, 0, 0, 0);
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+}
+.card__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem !important;
+  color: #fff;
+  text-shadow: 1px 2px 1px #000;
+  font-family: 'Gentium Plus', cursive;
+  font-size: 3rem;
+  white-space: nowrap;
+  text-align: center;
+}
+.social__card {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 1;
+  border-top: 1px solid #eaeaea;
+  color: #000;
+  padding: 0 auto;
+  @media screen and (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
+}
+
+.social__innercard {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 0 2rem;
+  gap: 0.5rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    padding: 0 0 0 1rem;
+  }
+}
+.social__nav {
+  color: #000;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0 2rem;
+  font-weight: 600;
+  text-align: left;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  gap: 0.5rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0 1rem 0 0;
+  }
+}
+.req_consult_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: all 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap !important;
+  gap: 2rem;
+  font-size: 1.5rem;
+  z-index: 50;
+  &:hover {
+    opacity: 0.9;
+    visibility: visible;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 6rem;
+  }
+}
+.mapAccordion {
+  div.accordion-body {
+    padding: 0;
+  }
+  button {
+    background: #121212 !important;
+    color: #fff !important;
+    font-size: 1.5rem !important;
+  }
 }
 
 .description {
@@ -55,62 +496,11 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
+.featuredGallery {
+  padding: 0 2rem;
   font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  font-family: 'Gentium Plus', serif;
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
   }
 }

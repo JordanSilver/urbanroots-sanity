@@ -1,0 +1,212 @@
+.gallery__hero {
+  position: relative;
+  background-image: url('/ur-flower.jpg');
+  background-size: cover;
+  background-position: 90%;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  border-bottom: #fff solid 1px;
+
+  ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+.gallery__title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 8rem;
+  position: relative;
+  font-family: 'Gentium Plus', serif;
+  text-shadow: #000 3px 3px 2px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+.gallery__description {
+  font-size: 2rem;
+  width: 100%;
+  color: #000;
+  text-align: center;
+  text-shadow: #000 1px 1px 1px;
+  margin: 1rem auto;
+  max-width: 800px;
+  position: relative;
+  font-family: 'Gentium Plus', serif;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.gallery__showcaseWrap {
+  // change height and width on desktop
+  height: 100%;
+  width: 100%;
+  max-width: 100% !important;
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  color: white;
+  z-index: 10;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  overflow-x: hidden !important;
+}
+.gallery__selectBtn {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+
+  z-index: 1;
+}
+
+.gallery__showcaseTitle {
+  width: 90%;
+  font-size: 2.5rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.5rem;
+  font-family: 'Gentium Plus', serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  position: relative;
+  left: 1rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.9rem;
+    letter-spacing: 0.8rem;
+  }
+}
+.gallery__showcaseInfo {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+.gallery__showcaseToolTip {
+  border: #fff solid 1px;
+}
+
+.gallery__showcaseSpinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: rgba(0, 0, 0, 1);
+
+  animation: fadeout 1.8s ease-in-out;
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    90% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.gallery__NavGrid {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  margin: 1rem auto;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.3rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  ::-webkit-scrollbar {
+    background-color: #000 !important;
+  }
+}
+
+.gallery__navGridTitle {
+  font-size: 2rem;
+
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+  color: #000;
+}
+
+.gallery__NavGridItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 12rem !important;
+  height: 12rem;
+  min-width: 12rem;
+  flex: 0;
+  cursor: pointer;
+  margin: 0 auto;
+
+  border-radius: 4px;
+  border: #fff solid 1px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 20px,
+    rgba(255, 255, 255, 0.3) 0px 6px 6px;
+  ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 18rem !important;
+    height: 18rem;
+    min-width: 18rem;
+  }
+}
+
+.gallery__NavGridItemTitle {
+  z-index: 1;
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold !important;
+  letter-spacing: 0.3rem;
+  margin: 0 auto;
+  text-shadow: black 2px 3px 1px;
+  @media screen and (min-width: 768px) {
+    font-size: 2.3rem;
+  }
+}

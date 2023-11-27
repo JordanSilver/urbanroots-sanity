@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: '#fff !important';
+  z-index: 5;
+  width: 100%;
+  background-color: '#fff !important';
+}
+
+.fb {
+  background-color: '#3b5998';
+  color: '#fff !important';
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  z-index: 5;
+}
