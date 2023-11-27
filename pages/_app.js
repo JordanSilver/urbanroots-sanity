@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import { SSRProvider } from 'react-bootstrap';
 import { ThemeProvider } from 'next-themes';
 import { AnimatePresence } from 'framer-motion';
+import SimpleReactLightbox from 'simple-react-lightbox';
+
 import Navigation from '../comps/Navigation';
 
 const MyApp = ({ Component, pageProps }) => {
@@ -24,16 +26,18 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <SSRProvider>
-        <ThemeProvider>
-          <Navigation mobile={mobile} />
-          <AnimatePresence
-            mode='wait'
-            initial={false}
-            onExitComplete={() => window.scrollTo(0, 0)}
-          >
-            <Component {...pageProps} mobile={mobile} />
-          </AnimatePresence>
-        </ThemeProvider>
+        <SimpleReactLightbox>
+          <ThemeProvider>
+            <Navigation mobile={mobile} />
+            <AnimatePresence
+              mode='wait'
+              initial={false}
+              onExitComplete={() => window.scrollTo(0, 0)}
+            >
+              <Component {...pageProps} mobile={mobile} />
+            </AnimatePresence>
+          </ThemeProvider>
+        </SimpleReactLightbox>
       </SSRProvider>
     </>
   );

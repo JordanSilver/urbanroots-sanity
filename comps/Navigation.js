@@ -117,10 +117,10 @@ const Navigation = ({ mobile }) => {
             <span onClick={handleClose}>
               <Link href='/contact'>Contact</Link>
             </span>
-
+            {/* 
             <span onClick={handleClose}>
               <Link href='/blog'>Blog</Link>
-            </span>
+            </span> */}
           </Offcanvas.Body>
           <motion.div>
             <CloseButton variant='black' onClick={handleClose} />
