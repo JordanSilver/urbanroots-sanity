@@ -25,7 +25,7 @@ const GalleryFeature = ({ galleryFeat, mobile, styles }) => {
 
   return (
     <div className={styles.featuredGallery} style={{ zIndex: '1' }}>
-      <h1 className='text-white my-3 text-center'>Featured Gallery</h1>
+      <h1 className='text-black my-3 text-center'>Featured Gallery</h1>
       <h5 className='justify-self-start text-secondary'>{galleryTitle}</h5>
       <ImageGallery
         items={gallery}
