@@ -10,7 +10,7 @@ const HeroShowcase = ({ showcase }) => {
   const [pictureInx, setPictureInx] = useState(0);
   return (
     <motion.div className={styles.HeroShowcase}>
-      <ShowcaseCarousel showcase={showcase} setPictureInx={setPictureInx} />
+      {/* <ShowcaseCarousel showcase={showcase} setPictureInx={setPictureInx} /> */}
 
       <div className={styles.HeroTitle}>
         BACKYARD <br /> RENOVATIONS <br />
