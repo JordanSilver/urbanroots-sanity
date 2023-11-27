@@ -26,13 +26,14 @@ export default function Home({
       <RouteAnimation>
         <main className={styles.main}>
           <HeroShowcase showcase={showcase} />
-          <TrustedPartners />
-          <ContactConsultation mobile={mobile} />
-          {/* <GalleryFeature
+          <GalleryFeature
             mobile={mobile}
             galleryFeat={galleryFeat}
             styles={styles}
-          /> */}
+          />
+          <TrustedPartners />
+          <ContactConsultation mobile={mobile} />
+
           <NavigationGrid mobile={mobile} services={services} />
           {/* <ShowcaseReviews clientReviews={clientReviews} />
            */}

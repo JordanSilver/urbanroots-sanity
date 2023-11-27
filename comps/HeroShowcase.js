@@ -9,7 +9,7 @@ import TitleAnimation from './TitleAnimation';
 const HeroShowcase = ({ showcase }) => {
   const [pictureInx, setPictureInx] = useState(0);
   return (
-    <div className={styles.HeroShowcase}>
+    <motion.div className={styles.HeroShowcase}>
       <ShowcaseCarousel showcase={showcase} setPictureInx={setPictureInx} />
 
       <div className={styles.HeroTitle}>
@@ -17,7 +17,7 @@ const HeroShowcase = ({ showcase }) => {
         <small>by</small> <br />
         <p className={styles.heroBrand}>URBAN ROOTS</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
